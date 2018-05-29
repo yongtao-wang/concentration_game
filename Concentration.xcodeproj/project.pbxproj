@@ -13,6 +13,8 @@
 		3D7A837820BCAD3100F1530C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D7A837720BCAD3100F1530C /* Assets.xcassets */; };
 		3D7A837B20BCAD3100F1530C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D7A837920BCAD3100F1530C /* LaunchScreen.storyboard */; };
 		3D7A838620BCAD3100F1530C /* ConcentrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7A838520BCAD3100F1530C /* ConcentrationTests.swift */; };
+		3D7A839220BCC51B00F1530C /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7A839120BCC51B00F1530C /* Concentration.swift */; };
+		3D7A839420BCC5D800F1530C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7A839320BCC5D800F1530C /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		3D7A838120BCAD3100F1530C /* ConcentrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConcentrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D7A838520BCAD3100F1530C /* ConcentrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationTests.swift; sourceTree = "<group>"; };
 		3D7A838720BCAD3100F1530C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D7A839120BCC51B00F1530C /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
+		3D7A839320BCC5D800F1530C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +81,11 @@
 		3D7A836F20BCAD3000F1530C /* Concentration */ = {
 			isa = PBXGroup;
 			children = (
-				3D7A837020BCAD3000F1530C /* AppDelegate.swift */,
+				3D7A839020BCAFAE00F1530C /* Supports */,
 				3D7A837220BCAD3000F1530C /* ViewController.swift */,
 				3D7A837420BCAD3000F1530C /* Main.storyboard */,
-				3D7A837720BCAD3100F1530C /* Assets.xcassets */,
-				3D7A837920BCAD3100F1530C /* LaunchScreen.storyboard */,
+				3D7A839120BCC51B00F1530C /* Concentration.swift */,
+				3D7A839320BCC5D800F1530C /* Card.swift */,
 				3D7A837C20BCAD3100F1530C /* Info.plist */,
 			);
 			path = Concentration;
@@ -94,6 +98,16 @@
 				3D7A838720BCAD3100F1530C /* Info.plist */,
 			);
 			path = ConcentrationTests;
+			sourceTree = "<group>";
+		};
+		3D7A839020BCAFAE00F1530C /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				3D7A837020BCAD3000F1530C /* AppDelegate.swift */,
+				3D7A837720BCAD3100F1530C /* Assets.xcassets */,
+				3D7A837920BCAD3100F1530C /* LaunchScreen.storyboard */,
+			);
+			path = Supports;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +213,8 @@
 			files = (
 				3D7A837320BCAD3000F1530C /* ViewController.swift in Sources */,
 				3D7A837120BCAD3000F1530C /* AppDelegate.swift in Sources */,
+				3D7A839220BCC51B00F1530C /* Concentration.swift in Sources */,
+				3D7A839420BCC5D800F1530C /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +374,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M4Q97J7AL9;
 				INFOPLIST_FILE = Concentration/Info.plist;
@@ -367,6 +384,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = yw.Concentration;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -376,6 +394,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M4Q97J7AL9;
 				INFOPLIST_FILE = Concentration/Info.plist;
@@ -385,6 +404,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = yw.Concentration;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
