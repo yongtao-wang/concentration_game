@@ -15,17 +15,17 @@ class Concentration{
             let card = Card()
             cards += [card, card]   // assiged struct is copied. two card are different objects with same value
         }
-        // TODO: shuffle the cards
+        cards.shuffle()
     }
     
     private(set) var cards = [Card]()
     
     func chooseCard(at index: Int) {
-        assert(cards.indices.contains(index), "Concentration.chooseCard(\(index)): chosen index not in the cards"
+        assert(cards.indices.contains(index), "Concentration.chooseCard(\(index)): chosen index not in the cards")
         if !cards[index].isMatched {
             if let matchIndex = indexOfOneAndOnlyFaceUpCard, matchIndex != index {
                 //check if cards match
-                if cards[matchIndex].identifier == cards[index].identifier {
+                if cards[matchIndex] == cards[index] {
                     cards[matchIndex].isMatched = true
                     cards[index].isMatched = true
                 }
@@ -57,6 +57,15 @@ class Concentration{
             for index in cards.indices {
                 cards[index].isFaceUp = (index == newValue)
             }
+        }
+    }
+}
+
+extension Array {
+    /** randomize the order of an array's elements */
+    mutating func shuffle() {
+        for _ in 0..<10 {
+            sort { (_,_) in arc4random() < arc4random() }
         }
     }
 }
